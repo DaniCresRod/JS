@@ -81,8 +81,8 @@ MANIPULACIÓN DEL DOM
 
 ● Crea array de objetos 10 objetos con su respectivos key:value. Cada objeto deberá tener las siguientes keys:
 
-# id, name, status, species, type, gender
+    id, name, status, species, type, gender
 
-# El value de cada key lo asignas tú
+    El value de cada key lo asignas tú
 
 ● Imprime cada elemento del objeto dentro de la tabla que creaste anteriormente.
