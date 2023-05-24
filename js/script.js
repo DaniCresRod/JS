@@ -127,4 +127,49 @@ numeroPOI.addEventListener("blur", function(){
     else{
         document.getElementById("ParImpar").innerText=numeroPOI.value+" es "+ParOImpar(numeroPOI.value);
     }    
-}); 
+});
+
+//Crear un array de 10 números
+let array10Numeros=[];
+
+for(let i=0; i<10; i++){
+    array10Numeros.push(i);
+}
+
+let aObjetivo=document.querySelector(".ArraysSec article:nth-of-type(1)");
+aObjetivo.appendChild(document.createElement("p")).innerHTML=array10Numeros;
+console.log(array10Numeros);
+
+//Crear una función que imprima en consola todos los números de un array (Investigar ciclo for)
+
+let pObjetivo=document.querySelector(".ArraysSec article:nth-of-type(2)").appendChild(document.createElement("p"));
+
+for(let i=0; i<array10Numeros.length; i++){
+    
+    pObjetivo.innerHTML= pObjetivo.textContent + array10Numeros[i];
+    console.log(array10Numeros[i]);
+}
+
+//Crear una función que añada un número al array
+
+document.getElementById("anadirAArray").addEventListener("blur", function(){
+
+    if(isNaN(parseInt(document.getElementById("anadirAArray").value))){
+        document.querySelector(".ArraysSec article:nth-of-type(3) p").innerText="No has introducido un numero";
+    }
+    else{
+        anadir(document.getElementById("anadirAArray").value);
+        console.log(array10Numeros);
+        document.querySelector(".ArraysSec article:nth-of-type(3) p").innerText=array10Numeros;
+    }
+} );
+
+function anadir(numero){
+    array10Numeros.push(numero);
+}
+
+//Crear una función que elimine los números pares de ese array.
+
+
+
+
