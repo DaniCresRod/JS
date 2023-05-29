@@ -169,7 +169,27 @@ function anadir(numero){
 }
 
 //Crear una función que elimine los números pares de ese array.
+function EliminaPares(arrayPaciente){
+    arrayPaciente.forEach((x, index)=>{
+        if(x%2==0){
+            arrayPaciente.splice(index, 1);
+        }        
+    });
+}
 
+document.getElementById("btnEliminarPares")
+.addEventListener("click", function(){
+    EliminaPares(array10Numeros);
+    document.querySelector(".ArraysSec article:nth-of-type(4) p").innerText=array10Numeros;
+    console.log(array10Numeros);
+});
+
+//Crear una función que devuelva el número mayor de un array.
+function obtenerMaximo(arrayPaciente){
+    arrayPaciente.sort();
+    document.querySelector(".ArraysSec article:nth-of-type(5) p").innerText=arrayPaciente[arrayPaciente.length-1];   
+    console.log(arrayPaciente[arrayPaciente.length-1]);
+}
 
 
 
